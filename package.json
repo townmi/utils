@@ -1,0 +1,42 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "javascript utils functions",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/townmi/utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "utils"
+  ],
+  "author": "towne766127696@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/townmi/utils/issues"
+  },
+  "homepage": "https://github.com/townmi/utils#readme",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.2.4",
+    "ts-jest": "^25.3.0",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
